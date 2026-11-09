@@ -1,6 +1,5 @@
 # 2026AK05151-ML-Assignment2
 2026AK05151-ML-Assignment-2 Repository
-AIML Machine Learning Assignment 2 
 
 ## a. Problem statement
 Build and evaluate five classification algorithms on one common dataset, then demonstrate the saved models through a Streamlit application that accepts a labeled test CSV and reports evaluation metrics and predictions.
