@@ -45,7 +45,7 @@ ML Model Name            | Observations
 
 ## Streamlit application
 - **Live app URL:** https://2026ak05151-ml-assignment2-eke98rnxat9jfffpbhy83h.streamlit.app/
-- Built in data is analysed and given the results on chosen classier and review the six matrics, confusion matrix, classification report and row-level predictions.
+- Built in data is analysed and given the results on chosen classier and review the six matrics, confusion matrix, classification report and row-level predictions. Option is given for also downloading test_data.csv file 
 - or
 - Upload `test_data.csv`, choose a classifier, and review the six metrics, confusion matrix, classification report and row-level predictions.
 - The app loads saved model files and does not fit or retrain on uploaded test data.
