@@ -34,7 +34,7 @@ All models use the same stratified train/test split. StandardScaler is included 
 
 ### Observations
 ML Model Name            | Observations
-|------------------------|-----------------------------------------------------------------------------------------------------------:|
+|------------------------|-------------------------------------------------------------------:|
 | Logistic Regression.   | Strong performance on this split, with 0.9825 accuracy and 0.9861 F1. Scaling is included in its pipeline. |
 | Decision Tree          | Lowest accuracy and F1 among these five runs (0.9123 and 0.9286). Its single-tree structure is easier to interpret, but this configuration performed less strongly on the held-out rows.|
 | KNN                    | Good performance (0.9561 accuracy, 0.9655 F1). Feature scaling is important because KNN relies on distances|
