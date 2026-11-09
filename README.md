@@ -27,14 +27,21 @@ All models use the same stratified train/test split. StandardScaler is included 
 | ML Model Name          | Accuracy | AUC    | Precision | Recall | F1     | MCC    |
 |------------------------|---------:|-------:|----------:|-------:|-------:|-------:|
 | Logistic Regression.   | 0.9825   | 0.9954 | 0.9861    | 0.9861 | 0.9861 | 0.9623 |
-| Decision Tree          | 0.9211   | 0.9163 | 0.9565    | 0.9167 | 0.9362 | 0.8341 |
+| Decision Tree          | 0.9123   | 0.9157 | 0.9559    | 0.9028 | 0.9286 | 0.8174 |
 | KNN                    | 0.9561   | 0.9788 | 0.9589    | 0.9722 | 0.9655 | 0.9054 |
 | Gaussian Naive Bayes.  | 0.9386   | 0.9878 | 0.9452    | 0.9583 | 0.9517 | 0.8676 |
 | Support Vector Machine | 0.9825   | 0.9950 | 0.9861    | 0.9861 | 0.9861 | 0.9623 |
 
 ### Observations
+ML Model Name            | Observations
+|------------------------|-----------------------------------------------------------------------------------------------------------:|
+| Logistic Regression.   | Strong performance on this split, with 0.9825 accuracy and 0.9861 F1. Scaling is included in its pipeline. |
+| Decision Tree          | Lowest accuracy and F1 among these five runs (0.9123 and 0.9286). Its single-tree structure is easier to interpret, but this configuration performed less strongly on the held-out rows.|
+| KNN                    | Good performance (0.9561 accuracy, 0.9655 F1). Feature scaling is important because KNN relies on distances|
+| Gaussian Naive Bayes.  | AUC is high (0.9878), while accuracy is 0.9386. This shows why it is useful to inspect several metrics rather than accuracy alone.|
+| Support Vector Machine | Tied with Logistic Regression on accuracy, precision, recall, F1 and MCC; its AUC is 0.9950. |
 - **Logistic Regression:** Strong performance on this split, with 0.9825 accuracy and 0.9861 F1. Scaling is included in its pipeline.
-- **Decision Tree:** Lowest accuracy and F1 among these five runs (0.9211 and 0.9362). Its single-tree structure is easier to interpret, but this configuration performed less strongly on the held-out rows.
+- **Decision Tree:** Lowest accuracy and F1 among these five runs (0.9123 and 0.9286). Its single-tree structure is easier to interpret, but this configuration performed less strongly on the held-out rows.
 - **KNN:** Good performance (0.9561 accuracy, 0.9655 F1). Feature scaling is important because KNN relies on distances.
 - **Gaussian Naive Bayes:** AUC is high (0.9878), while accuracy is 0.9386. This shows why it is useful to inspect several metrics rather than accuracy alone.
 - **Support Vector Machine:** Tied with Logistic Regression on accuracy, precision, recall, F1 and MCC; its AUC is 0.9950.
