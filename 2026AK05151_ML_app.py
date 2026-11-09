@@ -117,8 +117,8 @@ else:
                 st.subheader("Input rows and predictions")
                 st.dataframe(result, width="stretch")
                 st.download_button(
-                    "Download predictions CSV", result.to_csv(index=False).encode("utf-8"),
-                    file_name="predictions.csv", mime="text/csv",
+                    "Download predictions as test_data.csv", result.to_csv(index=False).encode("utf-8"),
+                    file_name="test_data.csv", mime="text/csv",
                 )
     except Exception as e:
         st.error(f"Could not process the uploaded CSV: {e}")
