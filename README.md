@@ -40,26 +40,19 @@ ML Model Name            | Observations
 | KNN                    | Good performance (0.9561 accuracy, 0.9655 F1). Feature scaling is important because KNN relies on distances|
 | Gaussian Naive Bayes.  | AUC is high (0.9878), while accuracy is 0.9386. This shows why it is useful to inspect several metrics rather than accuracy alone.|
 | Support Vector Machine | Tied with Logistic Regression on accuracy, precision, recall, F1 and MCC; its AUC is 0.9950. |
-- **Logistic Regression:** Strong performance on this split, with 0.9825 accuracy and 0.9861 F1. Scaling is included in its pipeline.
-- **Decision Tree:** Lowest accuracy and F1 among these five runs (0.9123 and 0.9286). Its single-tree structure is easier to interpret, but this configuration performed less strongly on the held-out rows.
-- **KNN:** Good performance (0.9561 accuracy, 0.9655 F1). Feature scaling is important because KNN relies on distances.
-- **Gaussian Naive Bayes:** AUC is high (0.9878), while accuracy is 0.9386. This shows why it is useful to inspect several metrics rather than accuracy alone.
-- **Support Vector Machine:** Tied with Logistic Regression on accuracy, precision, recall, F1 and MCC; its AUC is 0.9950.
+
 
 **Overall winner:** Logistic Regression and Support Vector Machine are tied on the main threshold-based metrics in this test run. Logistic Regression has the slightly higher AUC (0.9954 versus 0.9950), so it is the winner if AUC is used as the tie-breaker. The conclusion is specific to this split and these settings; it is not proof that one algorithm is always best.
 
 ## Streamlit application
-- **Live app URL:** https://2026ak05151-ml-assignment2-mpaf8urkosjcuxrjwzwmuo.streamlit.app/
-- 
+- **Live app URL:** https://2026ak05151-ml-assignment2-eke98rnxat9jfffpbhy83h.streamlit.app/
+- Built in data is analysed and given the results on chosen classier and review the six matrics, confusion matrix, classification report and row-level predictions.
+- or
 - Upload `test_data.csv`, choose a classifier, and review the six metrics, confusion matrix, classification report and row-level predictions.
 - The app loads saved model files and does not fit or retrain on uploaded test data.
 
 ## Project files
-- `2026ak05151_app.py` — Streamlit user interface
-- `train_models.py` — reproducible training and evaluation
+- `2026ak05151_ML_app.py` — Streamlit user interface
 - `model/` — five saved model pipelines/classifiers
 - `test_data.csv` — held-out test inputs plus target labels
-- `outputs/metrics.csv` — evaluation comparison
-- `outputs/test_predictions.csv` — predictions for every model
-- `outputs/*_confusion_matrix.csv` and `outputs/*_classification_report.txt` — per-model diagnostics
 - `requirements.txt` — dependencies
